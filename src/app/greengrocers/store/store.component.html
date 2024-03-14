@@ -1,0 +1,12 @@
+
+<div>
+        <ul class="item-list store--item-list">
+            <button (click)="filterByType('fruit')">Fruits</button>
+            <button (click)="filterByType('vegetable')">Vegetables</button>
+            <button (click)="sortByPrice()">Sort by Price</button>
+            <button (click)="sortByName()">Sort by Name</button>
+            <button (click)="filterByType('all')">All Products</button>
+            <app-store-item *ngFor="let item of filteredInventory | async" [item]="item">
+            </app-store-item>
+        </ul>
+</div>
